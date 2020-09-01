@@ -1,0 +1,28 @@
+## Devuelve el reverso-complementario de una cadena de nucleótidos dada
+
+# Input:  A DNA string Pattern
+# Output: The reverse complement of Pattern
+def ReverseComplement(Pattern):   
+    # your code here
+    return Complement(Reverse(Pattern))
+
+# Copy your Reverse() function here.
+def Reverse(Pattern):
+    # your code here
+    return Pattern[::-1]
+    
+# Copy your Complement() function here.
+def Complement(Pattern):
+    # your code here
+    complementary = ''
+    for i in Pattern:
+        if i == 'A':
+            complementary+= 'T'
+        elif i == 'T':
+            complementary+= 'A'
+        elif i == 'C':
+            complementary+= 'G'
+        elif i == 'G':
+            complementary+= 'C'
+                
+    return complementary
